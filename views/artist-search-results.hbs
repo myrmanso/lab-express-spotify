@@ -1,0 +1,13 @@
+{{#each artist}}
+    <div>
+        {{#if this.images}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}-image">
+        {{else}}
+            <img src="https://www.clipartmax.com/png/small/30-301220_free-svg-music-symbols-music-note-that-looks-like-an-s.png" alt="music symbol">
+        {{/if}}
+
+        <h3>{{this.name}}</h3>
+        <a href="/albums/{{this.id}}">View Albuns</a>
+
+    </div>
+{{/each}}
