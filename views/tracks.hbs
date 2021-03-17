@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each track}}
+        <tr>
+            <th scope="row">{{this.track_number}}</th>
+            <td>{{this.name}}</td>
+            <td>
+            {{#if this.preview_url}}
+                <audio controls src="{{this.preview_url}}">Your browser does not support this audio file.</audio>
+
+            {{else}}
+                Preview unavailable.
+            {{/if}}
+            </td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
